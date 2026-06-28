@@ -1,0 +1,345 @@
+/* ==================================================
+   SHREE TAX POINT
+   Professional Website Stylesheet
+================================================== */
+
+/* ---------- RESET ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Calibri, Arial, sans-serif;
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ---------- HEADER ---------- */
+
+header{
+    background:#0B2D5C;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+}
+
+.logo h2{
+    color:#fff;
+    font-size:30px;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#D4AF37;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+    background:
+    linear-gradient(rgba(11,45,92,.70),rgba(11,45,92,.70)),
+    url("../images/background.jpeg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    min-height:650px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:#fff;
+
+    padding:20px;
+}
+
+.hero h1{
+    font-size:64px;
+    margin-bottom:20px;
+}
+
+.hero h2{
+    font-size:42px;
+    color:#D4AF37;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:22px;
+    max-width:850px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 40px;
+    background:#D4AF37;
+    color:#0B2D5C;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#fff;
+    transform:scale(1.05);
+}
+/* ---------- SERVICES ---------- */
+
+.services{
+    padding:80px 60px;
+    background:#f5f7fb;
+    text-align:center;
+}
+
+.services h2{
+    font-size:42px;
+    color:#0B2D5C;
+    margin-bottom:50px;
+}
+
+.service-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#0B2D5C;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#555;
+}
+
+/* ---------- ABOUT ---------- */
+
+.about{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    padding:80px 60px;
+    background:#fff;
+}
+
+.about-image,
+.about-content{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.about-content h2{
+    color:#0B2D5C;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about-content p{
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+/* ---------- WHY US ---------- */
+
+.why-us{
+    background:#0B2D5C;
+    color:#fff;
+    padding:80px 60px;
+    text-align:center;
+}
+
+.why-us h2{
+    font-size:42px;
+    margin-bottom:50px;
+}
+
+.why-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.why-card{
+    background:#fff;
+    color:#333;
+    padding:30px;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.why-card:hover{
+    transform:translateY(-8px);
+}
+
+.why-card h3{
+    color:#0B2D5C;
+    margin-bottom:15px;
+}
+
+/* ---------- STATS ---------- */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:#D4AF37;
+    color:#0B2D5C;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.stat-box h2{
+    font-size:48px;
+}
+
+.stat-box p{
+    font-size:20px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+    padding:20px;
+}
+
+nav ul{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero h2{
+    font-size:28px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.service-container,
+.why-container,
+.stats{
+    grid-template-columns:1fr;
+}
+
+.about{
+    flex-direction:column;
+    text-align:center;
+}
+}.whatsapp{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:32px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    z-index:999;
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+footer{
+    background:#0B2D5C;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h2{
+    color:#D4AF37;
+    margin-bottom:15px;
+}
+
+footer p{
+    margin:8px 0;
+}
+.card,
+.why-card,
+.about-image img{
+    transition:.4s;
+}
+
+.card:hover,
+.why-card:hover,
+.about-image img:hover{
+    transform:translateY(-10px);
+}
+html{
+    scroll-behavior:smooth;
+}
