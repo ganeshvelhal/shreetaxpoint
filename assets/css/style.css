@@ -1,9 +1,12 @@
-/* ==================================================
+/* =====================================================
    SHREE TAX POINT
-   Professional Website Stylesheet
-================================================== */
+   PROFESSIONAL WEBSITE STYLESHEET
+   PART 1
+=====================================================*/
 
-/* ---------- RESET ---------- */
+/*==============================
+        RESET
+==============================*/
 
 *{
     margin:0;
@@ -11,25 +14,40 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:Calibri, Arial, sans-serif;
+    font-family:Calibri,Arial,sans-serif;
     background:#f5f7fb;
     color:#333;
     line-height:1.6;
 }
 
-/* ---------- HEADER ---------- */
+/*==============================
+        HEADER
+==============================*/
 
 header{
-    background:#0B2D5C;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 60px;
     position:sticky;
     top:0;
     z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 60px;
+
+    background:#0B2D5C;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
 }
+
+/*==============================
+        LOGO
+==============================*/
 
 .logo{
     display:flex;
@@ -38,17 +56,21 @@ header{
 }
 
 .logo img{
-    width:80px;
-    height:80px;
+    width:70px;
+    height:70px;
     border-radius:50%;
+    object-fit:cover;
 }
 
 .logo h2{
     color:#fff;
     font-size:30px;
+    font-weight:bold;
 }
 
-/* ---------- NAVIGATION ---------- */
+/*==============================
+      NAVIGATION
+==============================*/
 
 nav ul{
     display:flex;
@@ -57,288 +79,780 @@ nav ul{
 }
 
 nav ul li a{
-    color:#fff;
+
+    color:white;
+
     text-decoration:none;
+
     font-size:18px;
+
     font-weight:bold;
+
     transition:.3s;
+
 }
 
-nav ul li a:hover{
+nav ul li a:hover,
+nav ul li a.active{
+
     color:#D4AF37;
+
 }
 
-/* ---------- HERO ---------- */
+/*==============================
+      CALL BUTTON
+==============================*/
+
+.call-btn{
+
+    background:#D4AF37;
+
+    color:#0B2D5C;
+
+    padding:12px 24px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.call-btn:hover{
+
+    background:white;
+
+    transform:translateY(-2px);
+
+}
+
+/*==============================
+      HERO SECTION
+==============================*/
 
 .hero{
+
     background:
-    linear-gradient(rgba(11,45,92,.70),rgba(11,45,92,.70)),
+
+    linear-gradient(rgba(11,45,92,.70),
+
+    rgba(11,45,92,.70)),
+
     url("../images/background.jpeg");
 
     background-size:cover;
+
     background-position:center;
+
     background-repeat:no-repeat;
 
-    min-height:650px;
+    min-height:700px;
 
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
+
     align-items:center;
 
     text-align:center;
-    color:#fff;
 
-    padding:20px;
+    color:white;
+
+    padding:40px;
+
 }
 
 .hero h1{
-    font-size:64px;
+
+    font-size:65px;
+
+    font-weight:bold;
+
     margin-bottom:20px;
+
+    text-shadow:2px 2px 8px rgba(0,0,0,.5);
+
 }
 
 .hero h2{
-    font-size:42px;
+
+    font-size:36px;
+
     color:#D4AF37;
+
     margin-bottom:20px;
+
 }
 
 .hero p{
+
     font-size:22px;
-    max-width:850px;
+
+    max-width:900px;
+
+}
+
+/*==============================
+      HERO BUTTONS
+==============================*/
+
+.hero-buttons{
+
+    margin-top:35px;
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
 }
 
 .btn{
+
     display:inline-block;
-    margin-top:35px;
-    padding:15px 40px;
+
     background:#D4AF37;
+
     color:#0B2D5C;
+
+    padding:16px 35px;
+
+    border-radius:10px;
+
     text-decoration:none;
-    border-radius:8px;
+
+    font-size:18px;
+
     font-weight:bold;
+
     transition:.3s;
+
 }
 
 .btn:hover{
-    background:#fff;
-    transform:scale(1.05);
+
+    background:white;
+
+    transform:translateY(-3px);
+
 }
-/* ---------- SERVICES ---------- */
+
+.whatsapp{
+
+    background:#25D366;
+
+    color:white;
+
+}
+/*====================================================
+                SERVICES SECTION
+====================================================*/
 
 .services{
-    padding:80px 60px;
-    background:#f5f7fb;
+    padding:90px 8%;
+    background:#f8f9fc;
     text-align:center;
 }
 
 .services h2{
     font-size:42px;
     color:#0B2D5C;
-    margin-bottom:50px;
+    margin-bottom:15px;
+}
+
+.services p.section-text{
+    max-width:700px;
+    margin:0 auto 50px;
+    color:#666;
+    font-size:18px;
 }
 
 .service-container{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    gap:30px;
 }
 
 .card{
     background:#fff;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
+    padding:35px 30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+    min-height:260px;
+    text-align:center;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.card i{
+    font-size:50px;
+    color:#D4AF37;
+    margin-bottom:20px;
 }
 
 .card h3{
     color:#0B2D5C;
     margin-bottom:15px;
+    font-size:24px;
 }
 
 .card p{
     color:#555;
+    font-size:17px;
+    line-height:1.7;
 }
 
-/* ---------- ABOUT ---------- */
+/*====================================================
+                    ABOUT SECTION
+====================================================*/
 
 .about{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:50px;
-    padding:80px 60px;
-    background:#fff;
+    gap:60px;
+    padding:100px 8%;
+    background:#ffffff;
 }
 
-.about-image,
-.about-content{
+.about-image{
     flex:1;
 }
 
 .about-image img{
     width:100%;
-    border-radius:12px;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.about-image img:hover{
+    transform:scale(1.03);
+}
+
+.about-content{
+    flex:1;
 }
 
 .about-content h2{
+    font-size:42px;
     color:#0B2D5C;
-    font-size:40px;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 .about-content p{
-    margin-bottom:15px;
     font-size:18px;
+    color:#555;
+    margin-bottom:20px;
+    line-height:1.8;
 }
 
-/* ---------- WHY US ---------- */
+/*====================================================
+                WHY CHOOSE US
+====================================================*/
 
 .why-us{
     background:#0B2D5C;
-    color:#fff;
-    padding:80px 60px;
+    color:white;
     text-align:center;
+    padding:100px 8%;
 }
 
 .why-us h2{
     font-size:42px;
-    margin-bottom:50px;
+    margin-bottom:60px;
 }
 
 .why-container{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:25px;
+    gap:30px;
 }
 
 .why-card{
-    background:#fff;
+    background:white;
     color:#333;
-    padding:30px;
-    border-radius:12px;
-    transition:.3s;
+    padding:35px 25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.35s;
 }
 
 .why-card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 }
 
 .why-card h3{
     color:#0B2D5C;
     margin-bottom:15px;
+    font-size:22px;
 }
 
-/* ---------- STATS ---------- */
+.why-card p{
+    color:#555;
+    line-height:1.7;
+}
+
+/*====================================================
+                    STATISTICS
+====================================================*/
 
 .stats{
     display:grid;
     grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    padding:80px 8%;
     background:#D4AF37;
-    color:#0B2D5C;
-    text-align:center;
-    padding:60px 20px;
-}
-
-.stat-box h2{
-    font-size:48px;
-}
-
-.stat-box p{
-    font-size:20px;
-}
-
-/* ---------- RESPONSIVE ---------- */
-
-@media(max-width:768px){
-
-header{
-    flex-direction:column;
-    gap:20px;
-    padding:20px;
-}
-
-nav ul{
-    flex-direction:column;
-    gap:15px;
     text-align:center;
 }
 
-.hero h1{
-    font-size:42px;
-}
-
-.hero h2{
-    font-size:28px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-.service-container,
-.why-container,
-.stats{
-    grid-template-columns:1fr;
-}
-
-.about{
-    flex-direction:column;
-    text-align:center;
-}
-}.whatsapp{
-    position:fixed;
-    bottom:25px;
-    right:25px;
-    width:60px;
-    height:60px;
-    background:#25D366;
-    color:white;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:32px;
-    text-decoration:none;
-    box-shadow:0 5px 15px rgba(0,0,0,.3);
-    z-index:999;
+.stat-box{
+    background:white;
+    border-radius:15px;
+    padding:35px 20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
     transition:.3s;
 }
 
-.whatsapp:hover{
-    transform:scale(1.1);
+.stat-box:hover{
+    transform:translateY(-8px);
 }
-footer{
+
+.stat-box h2{
+    color:#0B2D5C;
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.stat-box p{
+    color:#555;
+    font-size:20px;
+    font-weight:bold;
+}
+/*====================================================
+                TESTIMONIALS SECTION
+====================================================*/
+
+.testimonials{
+    padding:100px 8%;
+    background:#ffffff;
+    text-align:center;
+}
+
+.testimonials h2{
+    font-size:42px;
+    color:#0B2D5C;
+    margin-bottom:60px;
+}
+
+.testimonial-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.testimonial-card{
+    background:#f8f9fc;
+    border-radius:15px;
+    padding:35px 30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+}
+
+.testimonial-card p{
+    font-size:17px;
+    color:#555;
+    line-height:1.8;
+    font-style:italic;
+}
+
+.testimonial-card h3{
+    margin-top:25px;
+    color:#0B2D5C;
+    font-size:22px;
+}
+
+.testimonial-card span{
+    color:#D4AF37;
+    font-size:15px;
+}
+
+/*====================================================
+                CONTACT SECTION
+====================================================*/
+
+.contact-section{
+    padding:100px 8%;
+    background:#f8f9fc;
+}
+
+.contact-section h2{
+    text-align:center;
+    font-size:42px;
+    color:#0B2D5C;
+    margin-bottom:60px;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact-info h3{
+    color:#0B2D5C;
+    margin-bottom:25px;
+}
+
+.contact-info p{
+    margin-bottom:18px;
+    font-size:18px;
+}
+
+.contact-form{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#D4AF37;
+}
+
+.contact-form textarea{
+    height:150px;
+    resize:none;
+}
+
+.contact-form button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:8px;
     background:#0B2D5C;
     color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    background:#D4AF37;
+    color:#0B2D5C;
+}
+
+/*====================================================
+                    GOOGLE MAP
+====================================================*/
+
+.map{
+    padding:80px 8%;
+    background:white;
+}
+
+.map h2{
     text-align:center;
-    padding:40px 20px;
+    color:#0B2D5C;
+    font-size:42px;
+    margin-bottom:40px;
 }
 
-footer h2{
+.map iframe{
+    width:100%;
+    height:450px;
+    border:none;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+/*====================================================
+                    FOOTER
+====================================================*/
+
+footer{
+    background:#081f42;
+    color:white;
+    padding:60px 8% 30px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    margin-bottom:40px;
+}
+
+.footer-box h3{
     color:#D4AF37;
-    margin-bottom:15px;
+    margin-bottom:20px;
+    font-size:24px;
 }
 
-footer p{
-    margin:8px 0;
-}
-.card,
-.why-card,
-.about-image img{
-    transition:.4s;
+.footer-box p,
+.footer-box a{
+    color:#ddd;
+    text-decoration:none;
+    line-height:2;
+    display:block;
 }
 
-.card:hover,
-.why-card:hover,
-.about-image img:hover{
+.footer-box a:hover{
+    color:#D4AF37;
+}
+
+.footer-bottom{
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.2);
+    padding-top:20px;
+    color:#ccc;
+    font-size:15px;
+}
+/*====================================================
+                TESTIMONIALS SECTION
+====================================================*/
+
+.testimonials{
+    padding:100px 8%;
+    background:#ffffff;
+    text-align:center;
+}
+
+.testimonials h2{
+    font-size:42px;
+    color:#0B2D5C;
+    margin-bottom:60px;
+}
+
+.testimonial-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.testimonial-card{
+    background:#f8f9fc;
+    border-radius:15px;
+    padding:35px 30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.testimonial-card:hover{
     transform:translateY(-10px);
+    box-shadow:0 18px 35px rgba(0,0,0,.15);
+}
+
+.testimonial-card p{
+    font-size:17px;
+    color:#555;
+    line-height:1.8;
+    font-style:italic;
+}
+
+.testimonial-card h3{
+    margin-top:25px;
+    color:#0B2D5C;
+    font-size:22px;
+}
+
+.testimonial-card span{
+    color:#D4AF37;
+    font-size:15px;
+}
+
+/*====================================================
+                CONTACT SECTION
+====================================================*/
+
+.contact-section{
+    padding:100px 8%;
+    background:#f8f9fc;
+}
+
+.contact-section h2{
+    text-align:center;
+    font-size:42px;
+    color:#0B2D5C;
+    margin-bottom:60px;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact-info h3{
+    color:#0B2D5C;
+    margin-bottom:25px;
+}
+
+.contact-info p{
+    margin-bottom:18px;
+    font-size:18px;
+}
+
+.contact-form{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#D4AF37;
+}
+
+.contact-form textarea{
+    height:150px;
+    resize:none;
+}
+
+.contact-form button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    background:#0B2D5C;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    background:#D4AF37;
+    color:#0B2D5C;
+}
+
+/*====================================================
+                    GOOGLE MAP
+====================================================*/
+
+.map{
+    padding:80px 8%;
+    background:white;
+}
+
+.map h2{
+    text-align:center;
+    color:#0B2D5C;
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+.map iframe{
+    width:100%;
+    height:450px;
+    border:none;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+/*====================================================
+                    FOOTER
+====================================================*/
+
+footer{
+    background:#081f42;
+    color:white;
+    padding:60px 8% 30px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    margin-bottom:40px;
+}
+
+.footer-box h3{
+    color:#D4AF37;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.footer-box p,
+.footer-box a{
+    color:#ddd;
+    text-decoration:none;
+    line-height:2;
+    display:block;
+}
+
+.footer-box a:hover{
+    color:#D4AF37;
+}
+
+.footer-bottom{
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.2);
+    padding-top:20px;
+    color:#ccc;
+    font-size:15px;
+}
+header{
+    position: sticky;
+    top:0;
+    z-index:1000;
+    background:#082567;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 html{
     scroll-behavior:smooth;
