@@ -1,14 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Shree Accounting & Taxation Services</title>
+    <title>Contact Us | Shree Tax Point</title>
 
-    <meta name="description" content="Professional Accounting & Taxation Services including Income Tax, GST, Accounting, Bookkeeping, Payroll and Company Registration.">
+    <meta name="description" content="Contact Shree Tax Point for Income Tax, GST, Accounting, Bookkeeping and Company Registration Services.">
 
-    <meta name="keywords" content="Income Tax, GST, Accounting, Tax Consultant, Bookkeeping, Company Registration, Shree Tax Point">
+    <meta name="keywords" content="Contact, Tax Consultant, GST, Accounting, Income Tax">
 
     <link rel="icon" href="assets/images/logo.jpeg">
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/images/logo.jpeg" alt="Logo" height="60">
+            <h2>Shree Tax Point</h2>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="contact-section">
+
+    <h1>Contact Us</h1>
+
+    <p>Fill out the form below and we will contact you shortly.</p>
+
+    <form id="contactForm">
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            required>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required>
+
+        <input
+            type="tel"
+            name="phone"
+            placeholder="Mobile Number"
+            required>
+
+        <select name="service" required>
+            <option value="">Select Service</option>
+            <option>Income Tax Return</option>
+            <option>GST Registration</option>
+            <option>GST Return Filing</option>
+            <option>Accounting</option>
+            <option>Bookkeeping</option>
+            <option>TDS Return</option>
+            <option>Payroll</option>
+            <option>Company Registration</option>
+            <option>Other</option>
+        </select>
+
+        <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"></textarea>
+
+        <button type="submit">
+            Submit Enquiry
+        </button>
+
+    </form>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 Shree Tax Point. All Rights Reserved.
+    </p>
+
+</footer>
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
