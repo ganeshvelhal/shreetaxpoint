@@ -463,29 +463,45 @@
                 <i class="fa-solid fa-clock"></i>
                 <strong>Working Hours:</strong><br>
                 Monday - Saturday<br>
-                9:00 AM - 7:00 PM
+                10:00 AM - 7:00 PM
             </p>
 
         </div>
 
         <div class="contact-form">
 
-            <form>
+            <form class="contactForm">
 
-                <input type="text" placeholder="Your Name" required>
+    <input type="text" name="name" placeholder="Your Name" required>
 
-                <input type="email" placeholder="Your Email" required>
+    <input type="email" name="email" placeholder="Your Email" required>
 
-                <input type="tel" placeholder="Mobile Number" required>
+    <input type="tel" name="phone" placeholder="Mobile Number" required>
 
-                <textarea placeholder="Write Your Message" rows="6" required></textarea>
+    <select name="service" required>
+        <option value="">Select Service</option>
+        <option>Income Tax Return</option>
+        <option>GST Registration</option>
+        <option>GST Return Filing</option>
+        <option>Accounting</option>
+        <option>Bookkeeping</option>
+        <option>TDS Return</option>
+        <option>Payroll</option>
+        <option>Company Registration</option>
+        <option>Financial Consultancy</option>
+    </select>
 
-                <button type="submit" class="btn">
-                    Send Message
-                </button>
+    <textarea
+        name="message"
+        rows="6"
+        placeholder="Write Your Message"
+        required></textarea>
 
-            </form>
+    <button type="submit" class="btn">
+        Send Message
+    </button>
 
+</form>
         </div>
 
     </div>
