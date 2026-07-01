@@ -1,29 +1,22 @@
-const scriptURL = "https://https://script.google.com/macros/s/AKfycbypf-rUTZheSHcT_X89IpT2PTzqO6RH_lEd6iyzYYf8CccdmGTXEq30-G-IJ_gpatw9BA/exec";
-
-console.log("script.js loaded");
+const scriptURL = "https://script.google.com/macros/s/AKfycbxNV4E5KPX8nLMoltM2uzyY4fB3ShdHVGQfF1EXOikfNmjJ07Zx3H7dmLBA0vHDXUReVQ/exec";
 
 const form = document.getElementById("contactForm");
 
-console.log(form);
-
 form.addEventListener("submit", function(e) {
-
-    console.log("Form submitted");
-
     e.preventDefault();
 
     fetch(scriptURL, {
         method: "POST",
         body: new FormData(form)
     })
-    .then(res => res.text())
+    .then(response => response.text())
     .then(data => {
+        alert("✅ Enquiry submitted successfully!");
+        form.reset();
         console.log(data);
-        alert("Success");
     })
-    .catch(err => {
-        console.error(err);
-        alert("Failed");
+    .catch(error => {
+        alert("❌ Error submitting form.");
+        console.error(error);
     });
-
 });
