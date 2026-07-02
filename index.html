@@ -652,6 +652,33 @@ update();
 
 </script>
 
+<script src="assets/js/script.js"></script>
+
+<script>
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+    const update = () => {
+
+        const target = +counter.dataset.target;
+        const count = +counter.innerText;
+        const increment = target / 120;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(update, 20);
+        } else {
+            counter.innerText = target + (target == 100 ? "%" : "+");
+        }
+
+    };
+
+    update();
+
+});
+</script>
+
 </body>
 <div id="loader">
 <div class="spinner"></div>

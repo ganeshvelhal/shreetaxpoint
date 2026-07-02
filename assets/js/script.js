@@ -8,10 +8,11 @@ forms.forEach(form => {
 
         e.preventDefault();
 
-        fetch(scriptURL, {
-            method: "POST",
-            body: new FormData(form)
-        })
+    fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form),
+        mode: "cors"
+})
         .then(response => response.text())
         .then(data => {
             alert("✅ Thank you! Your enquiry has been submitted successfully.");
