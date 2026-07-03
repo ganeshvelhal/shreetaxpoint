@@ -857,3 +857,152 @@ header{
 html{
     scroll-behavior:smooth;
 }
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+/* Images */
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+/* Large Tablets */
+@media (max-width:1024px){
+
+    .container,
+    .hero,
+    .about-container,
+    .services-container,
+    .contact-container,
+    .footer-container{
+        width:90%;
+        margin:auto;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:768px){
+
+    html{
+        font-size:15px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        width:100%;
+        text-align:center;
+        gap:15px;
+    }
+
+    .hero{
+        padding:70px 20px;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .services-grid,
+    .about-container,
+    .stats-container,
+    .contact-container,
+    .footer-container{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .service-card,
+    .stat-box,
+    .contact-box{
+        width:100%;
+    }
+
+    form input,
+    form select,
+    form textarea{
+        width:100%;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:480px){
+
+    html{
+        font-size:14px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    h2{
+        font-size:24px;
+    }
+
+    h3{
+        font-size:20px;
+    }
+
+    section{
+        padding:50px 15px;
+    }
+
+    .hero{
+        padding:60px 15px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .logo img{
+        width:55px;
+    }
+
+    .logo h2{
+        font-size:20px;
+    }
+
+    .btn{
+        padding:14px;
+        font-size:16px;
+    }
+
+    footer{
+        text-align:center;
+    }
+
+}
