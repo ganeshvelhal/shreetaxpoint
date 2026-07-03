@@ -38,3 +38,17 @@ bottomForm.addEventListener('submit', e => {
     });
 
 });
+
+/* ===========================
+   Mobile Menu
+=========================== */
+
+const menu = document.getElementById("mobile-menu");
+
+const nav = document.querySelector(".nav-links");
+
+menu.addEventListener("click", function(){
+
+    nav.classList.toggle("active");
+
+});
