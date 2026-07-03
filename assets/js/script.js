@@ -23,7 +23,18 @@ forms.forEach(form => {
             console.error(error);
             alert("❌ Something went wrong. Please try again.");
         });
+        
+const bottomForm = document.getElementById('bottomContactForm');
 
+bottomForm.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(bottomForm)})
+    .then(response => {
+       alert('Thank you! Your message has been sent successfully.');
+       bottomForm.reset(); // This clears the form fields after sending
+    })
+    .catch(error => console.error('Error!', error.message));
+});
     });
 
 });
