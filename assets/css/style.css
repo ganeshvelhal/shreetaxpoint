@@ -1006,3 +1006,81 @@ img{
     }
 
 }
+
+/* ===========================
+   Mobile Navigation
+=========================== */
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:32px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+}
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+.nav-links{
+
+    display:none;
+
+    width:100%;
+
+    flex-direction:column;
+
+    margin-top:20px;
+
+    background:#0d3b66;
+
+    border-radius:8px;
+
+    padding:15px;
+
+}
+
+.nav-links.active{
+
+    display:flex;
+
+}
+
+.nav-links li{
+
+    margin:10px 0;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+}
+
+}
