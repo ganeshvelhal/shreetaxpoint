@@ -459,10 +459,10 @@ async function submitForm(e) {
     });
 
     button.innerHTML = `
-        <i class="fas fa-check"></i>
-        Submitted Successfully
-    `;
-
+    <i class="fas fa-check"></i>
+    Submitted Successfully
+`;
+        
     alert("✅ Thank you! Your enquiry has been submitted.");
 
     form.reset();
