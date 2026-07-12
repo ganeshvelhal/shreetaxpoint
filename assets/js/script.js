@@ -449,7 +449,7 @@ async function submitForm(e) {
 
     try {
 
-   fetch(scriptURL, {
+   fetch(SCRIPT_URL, {
     method: "POST",
     mode: "no-cors",
     headers: {
