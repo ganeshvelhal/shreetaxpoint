@@ -3255,3 +3255,53 @@ RESPONSIVE
 
 }
 
+.payment-section {
+
+    padding: 100px 20px;
+    text-align: center;
+    background: #f5f7fb;
+}
+
+.payment-section h2 {
+
+    font-size: 40px;
+    color: #0b2d5c;
+    margin-bottom: 15px;
+}
+
+.payment-section p {
+
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.upi-qr {
+
+    width: 250px;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    margin: 25px 0;
+}
+
+.upi-id {
+
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b2d5c;
+}
+
+.payment-btn {
+
+    padding: 14px 28px;
+    background: #0b2d5c;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.payment-btn:hover {
+
+    transform: translateY(-3px);
+}
