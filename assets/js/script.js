@@ -449,40 +449,33 @@ async function submitForm(e) {
 
     try {
 
-        const response = await fetch(SCRIPT_URL, {
+   fetch(scriptURL, {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+        "Content-Type": "text/plain"
+    },
+    body: JSON.stringify(formData)
+})
+.then(() => {
 
-            method: "POST",
+    submitBtn.innerHTML = `
+        <i class="fas fa-check"></i>
+        Submitted Successfully
+    `;
 
-            mode: "cors",
+    alert("✅ Thank you! Your enquiry has been submitted.");
 
-            headers: {
+    form.reset();
 
-                "Content-Type": "application/json"
+})
+.catch((error) => {
 
-            },
+    console.error(error);
 
-            body: JSON.stringify(formData)
+    alert("❌ Unable to submit. Please try again.");
 
-        });
-
-
-        const result = await response.text();
-
-        console.log(result);
-
-
-        alert("✅ Thank you! Your enquiry has been submitted successfully.");
-
-        form.reset();
-
-    }
-
-    catch(error){
-
-        console.error(error);
-
-        alert("❌ Unable to submit. Please try again.");
-
+});
     }
 
     finally{
