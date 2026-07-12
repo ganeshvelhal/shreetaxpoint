@@ -449,17 +449,16 @@ async function submitForm(e) {
 
     try {
 
-   fetch(SCRIPT_URL, {
-    method: "POST",
-    mode: "no-cors",
-    headers: {
-        "Content-Type": "text/plain"
-    },
-    body: JSON.stringify(formData)
-})
-.then(() => {
+    await fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "text/plain"
+        },
+        body: JSON.stringify(formData)
+    });
 
-    submitBtn.innerHTML = `
+    button.innerHTML = `
         <i class="fas fa-check"></i>
         Submitted Successfully
     `;
@@ -468,23 +467,23 @@ async function submitForm(e) {
 
     form.reset();
 
-})
-.catch((error) => {
+}
+
+catch (error) {
 
     console.error(error);
 
     alert("❌ Unable to submit. Please try again.");
 
-});
-    }
+}
 
-    finally{
+finally {
 
-        button.disabled=false;
+    button.disabled = false;
 
-        button.innerHTML=originalText;
+    button.innerHTML = originalText;
 
-    }
+}
 
 }
 
