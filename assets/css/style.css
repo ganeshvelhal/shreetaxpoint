@@ -484,18 +484,13 @@ HEADER
 NAV CONTAINER
 ==========================*/
 
-.nav-container{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    min-height:82px;
-
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    min-height: 82px;
 }
-
 
 /*==========================
 LOGO
@@ -554,7 +549,7 @@ NAVIGATION
 
     align-items:center;
 
-    gap:35px;
+    gap:22px;
 
 }
 
@@ -830,27 +825,56 @@ MOBILE NAVIGATION
         height: 46px;
     }
 
+    @media (max-width: 768px) {
+
     .navbar {
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 82px;
         left: 0;
         width: 100%;
-        background: #fff;
-        max-height: 0;
-        overflow: hidden;
-        transition: 0.4s ease;
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+        height: calc(100vh - 82px);
+
+        background: #ffffff;
+
+        z-index: 9999;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+
+        transition: all 0.3s ease;
     }
 
     .navbar.active {
-        max-height: 450px;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     .navbar ul {
-        flex-direction: column;
-        padding: 25px;
-        gap: 20px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 30px 25px;
+
+    gap: 25px;
+}
+
+.navbar ul li {
+    width: 100%;
+    text-align: center;
+}
+
+.navbar ul li a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 18px;
+}
+}
 
     .navbar a {
         display: block;
@@ -1090,14 +1114,12 @@ INNER PAGE HERO
 BUTTON GROUP
 ==========================*/
 
-.hero-buttons{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:18px;
-
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 
